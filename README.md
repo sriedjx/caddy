@@ -7,8 +7,8 @@ Runtime image utilizes `s6-setuidgid` to drop privileges
 
 ## Build Instructions
 ```
-git clone https://github.com/whw3/caddy-http.git
-cd caddy-http
+git clone https://github.com/whw3/caddy.git
+cd caddy
 make clean
 make
 ```
