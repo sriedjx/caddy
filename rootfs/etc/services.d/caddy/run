@@ -1,0 +1,8 @@
+#!/bin/sh
+chown -R root:www-data /srv/pico/*
+find -type d -print0 |xargs -0 chmod 0750
+find -type f -print0 |xargs -0 chmod 0640
+chmod 0444 /srv/caddy/Caddyfile
+export CADDYPATH=/srv/caddy
+cd "$CADDYPATH"
+exec s6-setuidgid www-data /usr/bin/caddy -agree -log=stdout -conf=/srv/caddy/Caddyfile -root=/srv/pico

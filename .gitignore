@@ -1,0 +1,9 @@
+*~
+data/*
+docker-compose.yml
+plugins
+plugins.json
+VERSION
+rootfs/usr/bin/caddy
+Dockerfile
+caddy-tags.json

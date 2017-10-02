@@ -1,0 +1,5 @@
+#!/bin/sh
+TZ=''
+[[ -r /etc/timezone ]] && TZ=$(</etc/timezone)
+[[ ! -z "$TZ" ]] && echo "date.timezone = \"$TZ\"" > /etc/php7/php-fpm.d/timezone.conf
+exec php-fpm7
